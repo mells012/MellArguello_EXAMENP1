@@ -54,7 +54,7 @@ namespace MellArguello_EXAMENP1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MA_Id,MA_Nombre,MA_ConsumidorFinal,MA_Precio,MA_Fecha,OtraFecha")] MA_Burger mA_Burger)
+        public async Task<IActionResult> Create([Bind("MA_Id,MA_Nombre,MA_ConsumidorFinal,MA_Precio,MA_Fecha")] MA_Burger mA_Burger)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MellArguello_EXAMENP1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MA_Id,MA_Nombre,MA_ConsumidorFinal,MA_Precio,MA_Fecha,OtraFecha")] MA_Burger mA_Burger)
+        public async Task<IActionResult> Edit(string id, [Bind("MA_Id,MA_Nombre,MA_ConsumidorFinal,MA_Precio,MA_Fecha")] MA_Burger mA_Burger)
         {
             if (id != mA_Burger.MA_Nombre)
             {

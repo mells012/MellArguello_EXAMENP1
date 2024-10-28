@@ -24,26 +24,27 @@ namespace MellArguello_EXAMENP1.Migrations
 
             modelBuilder.Entity("MellArguello_EXAMENP1.Models.MA_Burger", b =>
                 {
-                    b.Property<string>("MA_Nombre")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("MA_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MA_Id"));
 
                     b.Property<bool>("MA_ConsumidorFinal")
-                        .HasMaxLength(50)
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("MA_Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("MA_Id")
-                        .HasColumnType("int");
+                    b.Property<string>("MA_Nombre")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<decimal>("MA_Precio")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<DateTime>("OtraFecha")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("MA_Nombre");
+                    b.HasKey("MA_Id");
 
                     b.ToTable("MA_Burger");
                 });

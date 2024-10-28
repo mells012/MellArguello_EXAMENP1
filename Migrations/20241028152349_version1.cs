@@ -20,7 +20,6 @@ namespace MellArguello_EXAMENP1.Migrations
                     MA_ConsumidorFinal = table.Column<bool>(type: "bit", maxLength: 50, nullable: false),
                     MA_Precio = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     MA_Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    OtraFecha = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
