@@ -4,11 +4,10 @@ namespace MellArguello_EXAMENP1.Models
 {
     public class MA_Burger
     {
-        public int Id { get; set; }
-        [Required]
-        public string? Name { get; set; }
-        public bool WithCheese { get; set; }
-        [Range(0.01, 9999.99)]
-        public decimal Precio { get; set; }
+        public int MA_Id { get; set; }
+        public string? MA_Nombre { get; set; }
+        public bool MA_ConsumidorFinal { get; set; }
+        public decimal MA_Precio { get; set; }
+        public DateTime MA_Fecha { get; set; }
     }
 }
