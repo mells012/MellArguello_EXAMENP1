@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MellArguello_EXAMENP1.Models.MA_Burger>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MA_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MA_ConsumidorFinal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MA_Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MA_Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OtraFecha)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MA_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MA_ConsumidorFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MA_Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MA_Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OtraFecha)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MA_Nombre">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MA_Nombre">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MA_Nombre">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
